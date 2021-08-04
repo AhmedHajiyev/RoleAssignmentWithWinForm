@@ -1,0 +1,17 @@
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\AdminPanel.exe.config
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\AdminPanel.exe
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\AdminPanel.pdb
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.csprojAssemblyReference.cache
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.Form1.resources
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.Properties.Resources.resources
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.csproj.GenerateResource.cache
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.csproj.CoreCompileInputs.cache
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.exe
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.pdb
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\EntityFramework.dll
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\EntityFramework.SqlServer.dll
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\EntityFramework.xml
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\EntityFramework.SqlServer.xml
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.csproj.CopyComplete
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.AddNewEditor.resources
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.AdminPage.resources
