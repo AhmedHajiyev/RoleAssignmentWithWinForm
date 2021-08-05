@@ -47,24 +47,12 @@
             this.checkBoxUpdate = new System.Windows.Forms.CheckBox();
             this.checkBoxRead = new System.Windows.Forms.CheckBox();
             this.checkBoxCreat = new System.Windows.Forms.CheckBox();
-            this.BtnSettings = new System.Windows.Forms.Button();
-            this.groupBoxAdmin = new System.Windows.Forms.GroupBox();
-            this.BtnAdminUpdate = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtAdminEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtAdminPassWord = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtAdminUserName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtAdminId = new System.Windows.Forms.TextBox();
             this.BtnUpdateTrue = new System.Windows.Forms.Button();
             this.groupBoxUpdate = new System.Windows.Forms.GroupBox();
             this.BtnDeleteSeen = new System.Windows.Forms.Button();
             this.groupBoxDelete = new System.Windows.Forms.GroupBox();
             this.BtnMin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxAdmin.SuspendLayout();
             this.groupBoxUpdate.SuspendLayout();
             this.groupBoxDelete.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +117,7 @@
             this.TxtUpdateID.Name = "TxtUpdateID";
             this.TxtUpdateID.Size = new System.Drawing.Size(39, 20);
             this.TxtUpdateID.TabIndex = 6;
-            this.TxtUpdateID.TextChanged += new System.EventHandler(this.TxtUpdateID_TextChanged);
+            this.TxtUpdateID.Leave += new System.EventHandler(this.TxtUpdateID_Leave);
             // 
             // BtnUpdate
             // 
@@ -239,114 +227,9 @@
             this.checkBoxCreat.Text = "Creat";
             this.checkBoxCreat.UseVisualStyleBackColor = true;
             // 
-            // BtnSettings
-            // 
-            this.BtnSettings.Location = new System.Drawing.Point(12, 279);
-            this.BtnSettings.Name = "BtnSettings";
-            this.BtnSettings.Size = new System.Drawing.Size(121, 23);
-            this.BtnSettings.TabIndex = 19;
-            this.BtnSettings.Text = "Settings(admin)";
-            this.BtnSettings.UseVisualStyleBackColor = true;
-            this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
-            // 
-            // groupBoxAdmin
-            // 
-            this.groupBoxAdmin.Controls.Add(this.BtnAdminUpdate);
-            this.groupBoxAdmin.Controls.Add(this.label5);
-            this.groupBoxAdmin.Controls.Add(this.TxtAdminEmail);
-            this.groupBoxAdmin.Controls.Add(this.label6);
-            this.groupBoxAdmin.Controls.Add(this.TxtAdminPassWord);
-            this.groupBoxAdmin.Controls.Add(this.label7);
-            this.groupBoxAdmin.Controls.Add(this.TxtAdminUserName);
-            this.groupBoxAdmin.Controls.Add(this.label8);
-            this.groupBoxAdmin.Controls.Add(this.TxtAdminId);
-            this.groupBoxAdmin.Location = new System.Drawing.Point(572, 224);
-            this.groupBoxAdmin.Name = "groupBoxAdmin";
-            this.groupBoxAdmin.Size = new System.Drawing.Size(162, 152);
-            this.groupBoxAdmin.TabIndex = 20;
-            this.groupBoxAdmin.TabStop = false;
-            // 
-            // BtnAdminUpdate
-            // 
-            this.BtnAdminUpdate.Location = new System.Drawing.Point(6, 123);
-            this.BtnAdminUpdate.Name = "BtnAdminUpdate";
-            this.BtnAdminUpdate.Size = new System.Drawing.Size(111, 23);
-            this.BtnAdminUpdate.TabIndex = 23;
-            this.BtnAdminUpdate.Text = "Update";
-            this.BtnAdminUpdate.UseVisualStyleBackColor = true;
-            this.BtnAdminUpdate.Click += new System.EventHandler(this.BtnAdminUpdate_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Email:";
-            // 
-            // TxtAdminEmail
-            // 
-            this.TxtAdminEmail.Enabled = false;
-            this.TxtAdminEmail.Location = new System.Drawing.Point(73, 94);
-            this.TxtAdminEmail.Name = "TxtAdminEmail";
-            this.TxtAdminEmail.Size = new System.Drawing.Size(83, 20);
-            this.TxtAdminEmail.TabIndex = 21;
-            this.TxtAdminEmail.Text = "admin@gmail.com";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Password:";
-            // 
-            // TxtAdminPassWord
-            // 
-            this.TxtAdminPassWord.Location = new System.Drawing.Point(73, 68);
-            this.TxtAdminPassWord.Name = "TxtAdminPassWord";
-            this.TxtAdminPassWord.Size = new System.Drawing.Size(83, 20);
-            this.TxtAdminPassWord.TabIndex = 19;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Username:";
-            // 
-            // TxtAdminUserName
-            // 
-            this.TxtAdminUserName.Location = new System.Drawing.Point(73, 42);
-            this.TxtAdminUserName.Name = "TxtAdminUserName";
-            this.TxtAdminUserName.Size = new System.Drawing.Size(83, 20);
-            this.TxtAdminUserName.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "ID:";
-            // 
-            // TxtAdminId
-            // 
-            this.TxtAdminId.Enabled = false;
-            this.TxtAdminId.Location = new System.Drawing.Point(73, 16);
-            this.TxtAdminId.Name = "TxtAdminId";
-            this.TxtAdminId.Size = new System.Drawing.Size(83, 20);
-            this.TxtAdminId.TabIndex = 15;
-            this.TxtAdminId.Text = "11";
-            // 
             // BtnUpdateTrue
             // 
-            this.BtnUpdateTrue.Location = new System.Drawing.Point(12, 250);
+            this.BtnUpdateTrue.Location = new System.Drawing.Point(12, 253);
             this.BtnUpdateTrue.Name = "BtnUpdateTrue";
             this.BtnUpdateTrue.Size = new System.Drawing.Size(121, 23);
             this.BtnUpdateTrue.TabIndex = 21;
@@ -369,7 +252,7 @@
             this.groupBoxUpdate.Controls.Add(this.checkBoxCreat);
             this.groupBoxUpdate.Controls.Add(this.TxtEmail);
             this.groupBoxUpdate.Controls.Add(this.Email);
-            this.groupBoxUpdate.Location = new System.Drawing.Point(263, 215);
+            this.groupBoxUpdate.Location = new System.Drawing.Point(263, 190);
             this.groupBoxUpdate.Name = "groupBoxUpdate";
             this.groupBoxUpdate.Size = new System.Drawing.Size(200, 161);
             this.groupBoxUpdate.TabIndex = 22;
@@ -377,7 +260,7 @@
             // 
             // BtnDeleteSeen
             // 
-            this.BtnDeleteSeen.Location = new System.Drawing.Point(12, 308);
+            this.BtnDeleteSeen.Location = new System.Drawing.Point(12, 282);
             this.BtnDeleteSeen.Name = "BtnDeleteSeen";
             this.BtnDeleteSeen.Size = new System.Drawing.Size(121, 23);
             this.BtnDeleteSeen.TabIndex = 23;
@@ -390,7 +273,7 @@
             this.groupBoxDelete.Controls.Add(this.label1);
             this.groupBoxDelete.Controls.Add(this.BtnDelete);
             this.groupBoxDelete.Controls.Add(this.TxtID);
-            this.groupBoxDelete.Location = new System.Drawing.Point(517, 194);
+            this.groupBoxDelete.Location = new System.Drawing.Point(263, 198);
             this.groupBoxDelete.Name = "groupBoxDelete";
             this.groupBoxDelete.Size = new System.Drawing.Size(154, 48);
             this.groupBoxDelete.TabIndex = 24;
@@ -398,7 +281,7 @@
             // 
             // BtnMin
             // 
-            this.BtnMin.Location = new System.Drawing.Point(12, 337);
+            this.BtnMin.Location = new System.Drawing.Point(12, 311);
             this.BtnMin.Name = "BtnMin";
             this.BtnMin.Size = new System.Drawing.Size(121, 23);
             this.BtnMin.TabIndex = 25;
@@ -416,8 +299,6 @@
             this.Controls.Add(this.BtnDeleteSeen);
             this.Controls.Add(this.groupBoxUpdate);
             this.Controls.Add(this.BtnUpdateTrue);
-            this.Controls.Add(this.groupBoxAdmin);
-            this.Controls.Add(this.BtnSettings);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.btnAddNewEditor);
             this.Controls.Add(this.dataGridView1);
@@ -425,8 +306,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Page";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBoxAdmin.ResumeLayout(false);
-            this.groupBoxAdmin.PerformLayout();
             this.groupBoxUpdate.ResumeLayout(false);
             this.groupBoxUpdate.PerformLayout();
             this.groupBoxDelete.ResumeLayout(false);
@@ -456,17 +335,6 @@
         private System.Windows.Forms.CheckBox checkBoxUpdate;
         private System.Windows.Forms.CheckBox checkBoxRead;
         private System.Windows.Forms.CheckBox checkBoxCreat;
-        private System.Windows.Forms.Button BtnSettings;
-        private System.Windows.Forms.GroupBox groupBoxAdmin;
-        private System.Windows.Forms.Button BtnAdminUpdate;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtAdminEmail;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtAdminPassWord;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtAdminUserName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtAdminId;
         private System.Windows.Forms.Button BtnUpdateTrue;
         private System.Windows.Forms.GroupBox groupBoxUpdate;
         private System.Windows.Forms.Button BtnDeleteSeen;

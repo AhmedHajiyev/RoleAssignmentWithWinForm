@@ -21,15 +21,10 @@ namespace AdminPanel
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;
 
-            groupBoxAdmin.Visible = false;
             groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = false;
 
-            if (TxtUpdateID.Text == "11")
-            {
-                TxtEmail.Text = "admin@gmail.com";
-                TxtEmail.Enabled = false;
-            }
+            
         }
 
         WinFormTaskEntities db = new WinFormTaskEntities();
@@ -43,6 +38,13 @@ namespace AdminPanel
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(TxtID.Text);
+            if (id == 11)
+            {
+                MessageBox.Show("You cannot delete the Admin");
+            }
+            else
+            {
+
             var x = db.User_Info.Find(id);
             db.User_Info.Remove(x);
             db.SaveChanges();
@@ -59,8 +61,10 @@ namespace AdminPanel
                 dataGridView1.Columns[5].Visible = false;
                 dataGridView1.Columns[6].Visible = false;
                 dataGridView1.Columns[7].Visible = false;
+                }
 
             }
+
 
         }
 
@@ -109,66 +113,58 @@ namespace AdminPanel
             }
         }
 
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            groupBoxAdmin.Visible = true;
-            groupBoxUpdate.Visible = false;
-            groupBoxDelete.Visible = false;
-            
-
-        }
+        
 
         
 
-        private void BtnAdminUpdate_Click(object sender, EventArgs e)
-        {
-            
-            int id = Convert.ToInt32(TxtAdminId.Text);
-            var x = db.User_Info.Find(id);
-
-            x.Username = TxtAdminUserName.Text;
-            x.Password = TxtAdminPassWord.Text;
-
-            db.SaveChanges();
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-BLBO57O\SQLEXPRESS;Initial Catalog=WinFormTask;Integrated Security=True");
-            SqlCommand command = new SqlCommand("Select * From User_Info ", connection);
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
-            dataGridView1.Columns[7].Visible = false;
-
-            groupBoxAdmin.Visible = false;
-           
-        }
+        
 
         private void BtnDeleteSeen_Click(object sender, EventArgs e)
         {
             groupBoxDelete.Visible = true;
             groupBoxUpdate.Visible = false;
-            groupBoxAdmin.Visible = false;
         }
 
         private void BtnUpdateTrue_Click(object sender, EventArgs e)
         {
             groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = true;
-            groupBoxAdmin.Visible = false;
         }
 
         private void BtnMin_Click(object sender, EventArgs e)
         {
             groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = false;
-            groupBoxAdmin.Visible = false;
         }
 
-        private void TxtUpdateID_TextChanged(object sender, EventArgs e)
+        private void TxtUpdateID_Leave(object sender, EventArgs e)
         {
-            
+            if (TxtUpdateID.Text == "11")
+            {
+                TxtEmail.Text = "admin@gmail.com";
+                TxtEmail.Enabled = false;
+                checkBoxCreat.Checked = true;
+                checkBoxUpdate.Checked = true;
+                checkBoxRead.Checked = true;
+                checkBoxDelete.Checked = true;
+                checkBoxCreat.Enabled= false;
+                checkBoxUpdate.Enabled = false;
+                checkBoxRead.Enabled= false;
+                checkBoxDelete.Enabled = false;
+            }
+            else
+            {
+                TxtEmail.Clear();
+                TxtEmail.Enabled = true;
+                checkBoxCreat.Checked = false;
+                checkBoxUpdate.Checked = false;
+                checkBoxRead.Checked = false;
+                checkBoxDelete.Checked = false;
+                checkBoxCreat.Enabled = true;
+                checkBoxUpdate.Enabled = true;
+                checkBoxRead.Enabled = true;
+                checkBoxDelete.Enabled = true;
+            }
         }
 
         
