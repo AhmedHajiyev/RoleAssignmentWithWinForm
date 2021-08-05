@@ -40,11 +40,7 @@
             this.LblName = new System.Windows.Forms.Label();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.groupBoxDelete = new System.Windows.Forms.GroupBox();
-            this.BtnDelAndClose = new System.Windows.Forms.Button();
-            this.TxtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnUpdateAndSeen = new System.Windows.Forms.Button();
             this.groupBoxUpdate = new System.Windows.Forms.GroupBox();
             this.TxtUpdateID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,7 +54,6 @@
             this.BtnMin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxAdd.SuspendLayout();
-            this.groupBoxDelete.SuspendLayout();
             this.groupBoxUpdate.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,52 +169,15 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // groupBoxDelete
+            // BtnUpdateAndSeen
             // 
-            this.groupBoxDelete.Controls.Add(this.BtnDelAndClose);
-            this.groupBoxDelete.Controls.Add(this.TxtID);
-            this.groupBoxDelete.Controls.Add(this.label1);
-            this.groupBoxDelete.Location = new System.Drawing.Point(295, 215);
-            this.groupBoxDelete.Name = "groupBoxDelete";
-            this.groupBoxDelete.Size = new System.Drawing.Size(176, 49);
-            this.groupBoxDelete.TabIndex = 5;
-            this.groupBoxDelete.TabStop = false;
-            // 
-            // BtnDelAndClose
-            // 
-            this.BtnDelAndClose.Location = new System.Drawing.Point(87, 15);
-            this.BtnDelAndClose.Name = "BtnDelAndClose";
-            this.BtnDelAndClose.Size = new System.Drawing.Size(75, 23);
-            this.BtnDelAndClose.TabIndex = 2;
-            this.BtnDelAndClose.Text = "Delete";
-            this.BtnDelAndClose.UseVisualStyleBackColor = true;
-            this.BtnDelAndClose.Click += new System.EventHandler(this.BtnDelAndClose_Click);
-            // 
-            // TxtID
-            // 
-            this.TxtID.Location = new System.Drawing.Point(42, 17);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(39, 20);
-            this.TxtID.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnUpdateAndSeen.Location = new System.Drawing.Point(12, 248);
+            this.BtnUpdateAndSeen.Name = "BtnUpdateAndSeen";
+            this.BtnUpdateAndSeen.Size = new System.Drawing.Size(119, 23);
+            this.BtnUpdateAndSeen.TabIndex = 6;
+            this.BtnUpdateAndSeen.Text = "Update";
+            this.BtnUpdateAndSeen.UseVisualStyleBackColor = true;
+            this.BtnUpdateAndSeen.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBoxUpdate
             // 
@@ -329,8 +287,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnMin);
             this.Controls.Add(this.groupBoxUpdate);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBoxDelete);
+            this.Controls.Add(this.BtnUpdateAndSeen);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.groupBoxAdd);
@@ -338,12 +295,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Editor_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Editor_Page";
+            this.Text = "Editor Page";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxAdd.ResumeLayout(false);
             this.groupBoxAdd.PerformLayout();
-            this.groupBoxDelete.ResumeLayout(false);
-            this.groupBoxDelete.PerformLayout();
             this.groupBoxUpdate.ResumeLayout(false);
             this.groupBoxUpdate.PerformLayout();
             this.ResumeLayout(false);
@@ -353,7 +308,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BtnAddNewCustomer;
+        public System.Windows.Forms.Button BtnAddNewCustomer;
         private System.Windows.Forms.GroupBox groupBoxAdd;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox TxtEmail;
@@ -363,12 +318,8 @@
         private System.Windows.Forms.Label LblSurname;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Button BtnRefresh;
-        private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.GroupBox groupBoxDelete;
-        private System.Windows.Forms.Button BtnDelAndClose;
-        private System.Windows.Forms.TextBox TxtID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button BtnDelete;
+        public System.Windows.Forms.Button BtnUpdateAndSeen;
         private System.Windows.Forms.GroupBox groupBoxUpdate;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.TextBox TxtUpdateEmail;

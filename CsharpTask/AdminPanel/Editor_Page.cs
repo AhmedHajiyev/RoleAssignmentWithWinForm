@@ -24,7 +24,6 @@ namespace AdminPanel
             dataGridView1.DataSource = dt;
 
             groupBoxAdd.Visible = false;
-            groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = false;
 
         }
@@ -63,36 +62,28 @@ namespace AdminPanel
         {
             groupBoxAdd.Visible = true;
             groupBoxUpdate.Visible = false;
-            groupBoxDelete.Visible = false;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            groupBoxDelete.Visible = true;
-            groupBoxAdd.Visible = false;
-            groupBoxUpdate.Visible = false;
-
-        }
-
-        private void BtnDelAndClose_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(TxtID.Text);
-            var x = db.Customers.Find(id);
+            int index = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            //TxtID.Text = index.ToString();
+            int id = Convert.ToInt32(index.ToString());
+            var x = db.Customers.Find(index);
             db.Customers.Remove(x);
             db.SaveChanges();
-            DialogResult result =  MessageBox.Show("Customer Deleted");
-            if (result == DialogResult.OK)
-            {
-                groupBoxDelete.Visible = false;
-            }
+            DialogResult result = MessageBox.Show("Customer Deleted");
+            
+
 
         }
+
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
             groupBoxUpdate.Visible = true;
             groupBoxAdd.Visible = false;
-            groupBoxDelete.Visible = false;
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -117,9 +108,7 @@ namespace AdminPanel
         {
             groupBoxAdd.Visible = false;
             groupBoxUpdate.Visible = false;
-            groupBoxDelete.Visible = false;
-        }
 
-        
+        }
     }
 }

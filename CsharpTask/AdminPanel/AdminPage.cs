@@ -21,7 +21,6 @@ namespace AdminPanel
             dataGridView1.Columns[6].Visible = false;
             dataGridView1.Columns[7].Visible = false;
 
-            groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = false;
 
             
@@ -35,38 +34,7 @@ namespace AdminPanel
             addNewEditor.ShowDialog();
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(TxtID.Text);
-            if (id == 11)
-            {
-                MessageBox.Show("You cannot delete the Admin");
-            }
-            else
-            {
-
-            var x = db.User_Info.Find(id);
-            db.User_Info.Remove(x);
-            db.SaveChanges();
-            DialogResult result =  MessageBox.Show("data silindi");
-            if (result == DialogResult.OK)
-            {
-                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-BLBO57O\SQLEXPRESS;Initial Catalog=WinFormTask;Integrated Security=True");
-                SqlCommand command = new SqlCommand("Select * From User_Info ", connection);
-                SqlDataAdapter da = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns[4].Visible = false;
-                dataGridView1.Columns[5].Visible = false;
-                dataGridView1.Columns[6].Visible = false;
-                dataGridView1.Columns[7].Visible = false;
-                }
-
-            }
-
-
-        }
+       
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
@@ -121,24 +89,61 @@ namespace AdminPanel
 
         private void BtnDeleteSeen_Click(object sender, EventArgs e)
         {
-            groupBoxDelete.Visible = true;
             groupBoxUpdate.Visible = false;
+
+
+            int index = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            //TxtID.Text = index.ToString();
+            int id = Convert.ToInt32(index.ToString());
+            if (id == 11)
+            {
+                MessageBox.Show("You cannot delete the Admin");
+            }
+            else
+            {
+
+                var x = db.User_Info.Find(index);
+                db.User_Info.Remove(x);
+                db.SaveChanges();
+                DialogResult result = MessageBox.Show($"{id} deleted");
+                if (result == DialogResult.OK)
+                {
+                    SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-BLBO57O\SQLEXPRESS;Initial Catalog=WinFormTask;Integrated Security=True");
+                    SqlCommand command = new SqlCommand("Select * From User_Info ", connection);
+                    SqlDataAdapter da = new SqlDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    dataGridView1.Columns[4].Visible = false;
+                    dataGridView1.Columns[5].Visible = false;
+                    dataGridView1.Columns[6].Visible = false;
+                    dataGridView1.Columns[7].Visible = false;
+                }
+
+            }
+
+
+
+            
         }
 
         private void BtnUpdateTrue_Click(object sender, EventArgs e)
         {
-            groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = true;
         }
 
         private void BtnMin_Click(object sender, EventArgs e)
         {
-            groupBoxDelete.Visible = false;
             groupBoxUpdate.Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
         }
 
         private void TxtUpdateID_Leave(object sender, EventArgs e)
         {
+            
             if (TxtUpdateID.Text == "11")
             {
                 TxtEmail.Text = "admin@gmail.com";
@@ -165,6 +170,17 @@ namespace AdminPanel
                 checkBoxRead.Enabled = true;
                 checkBoxDelete.Enabled = true;
             }
+        }
+
+        private void BtnRead_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Columns[4].Visible = true;
+            dataGridView1.Columns[5].Visible = true;
+            dataGridView1.Columns[6].Visible = true;
+            dataGridView1.Columns[7].Visible = true;
+            
+
+
         }
 
         

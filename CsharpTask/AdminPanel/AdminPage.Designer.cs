@@ -30,9 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddNewEditor = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.TxtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtUpdateID = new System.Windows.Forms.TextBox();
             this.BtnUpdate = new System.Windows.Forms.Button();
@@ -50,11 +47,10 @@
             this.BtnUpdateTrue = new System.Windows.Forms.Button();
             this.groupBoxUpdate = new System.Windows.Forms.GroupBox();
             this.BtnDeleteSeen = new System.Windows.Forms.Button();
-            this.groupBoxDelete = new System.Windows.Forms.GroupBox();
             this.BtnMin = new System.Windows.Forms.Button();
+            this.BtnRead = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxUpdate.SuspendLayout();
-            this.groupBoxDelete.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,32 +71,6 @@
             this.btnAddNewEditor.Text = "Add New Editor";
             this.btnAddNewEditor.UseVisualStyleBackColor = true;
             this.btnAddNewEditor.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Location = new System.Drawing.Point(88, 15);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(52, 23);
-            this.BtnDelete.TabIndex = 2;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.UseVisualStyleBackColor = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // TxtID
-            // 
-            this.TxtID.Location = new System.Drawing.Point(43, 17);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(39, 20);
-            this.TxtID.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ID:";
             // 
             // label2
             // 
@@ -268,20 +238,9 @@
             this.BtnDeleteSeen.UseVisualStyleBackColor = true;
             this.BtnDeleteSeen.Click += new System.EventHandler(this.BtnDeleteSeen_Click);
             // 
-            // groupBoxDelete
-            // 
-            this.groupBoxDelete.Controls.Add(this.label1);
-            this.groupBoxDelete.Controls.Add(this.BtnDelete);
-            this.groupBoxDelete.Controls.Add(this.TxtID);
-            this.groupBoxDelete.Location = new System.Drawing.Point(263, 198);
-            this.groupBoxDelete.Name = "groupBoxDelete";
-            this.groupBoxDelete.Size = new System.Drawing.Size(154, 48);
-            this.groupBoxDelete.TabIndex = 24;
-            this.groupBoxDelete.TabStop = false;
-            // 
             // BtnMin
             // 
-            this.BtnMin.Location = new System.Drawing.Point(12, 311);
+            this.BtnMin.Location = new System.Drawing.Point(12, 340);
             this.BtnMin.Name = "BtnMin";
             this.BtnMin.Size = new System.Drawing.Size(121, 23);
             this.BtnMin.TabIndex = 25;
@@ -289,13 +248,23 @@
             this.BtnMin.UseVisualStyleBackColor = true;
             this.BtnMin.Click += new System.EventHandler(this.BtnMin_Click);
             // 
+            // BtnRead
+            // 
+            this.BtnRead.Location = new System.Drawing.Point(12, 311);
+            this.BtnRead.Name = "BtnRead";
+            this.BtnRead.Size = new System.Drawing.Size(121, 23);
+            this.BtnRead.TabIndex = 26;
+            this.BtnRead.Text = "Read";
+            this.BtnRead.UseVisualStyleBackColor = true;
+            this.BtnRead.Click += new System.EventHandler(this.BtnRead_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnRead);
             this.Controls.Add(this.BtnMin);
-            this.Controls.Add(this.groupBoxDelete);
             this.Controls.Add(this.BtnDeleteSeen);
             this.Controls.Add(this.groupBoxUpdate);
             this.Controls.Add(this.BtnUpdateTrue);
@@ -308,8 +277,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxUpdate.ResumeLayout(false);
             this.groupBoxUpdate.PerformLayout();
-            this.groupBoxDelete.ResumeLayout(false);
-            this.groupBoxDelete.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -318,9 +285,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAddNewEditor;
-        private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.TextBox TxtID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtUpdateID;
         private System.Windows.Forms.Button BtnUpdate;
@@ -338,7 +302,7 @@
         private System.Windows.Forms.Button BtnUpdateTrue;
         private System.Windows.Forms.GroupBox groupBoxUpdate;
         private System.Windows.Forms.Button BtnDeleteSeen;
-        private System.Windows.Forms.GroupBox groupBoxDelete;
         private System.Windows.Forms.Button BtnMin;
+        private System.Windows.Forms.Button BtnRead;
     }
 }
