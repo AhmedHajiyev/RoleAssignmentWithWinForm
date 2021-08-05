@@ -60,6 +60,7 @@
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(100, 20);
             this.userName.TabIndex = 2;
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // passWord
             // 
@@ -67,6 +68,7 @@
             this.passWord.Name = "passWord";
             this.passWord.Size = new System.Drawing.Size(100, 20);
             this.passWord.TabIndex = 3;
+            this.passWord.TextChanged += new System.EventHandler(this.passWord_TextChanged);
             // 
             // signIn
             // 
@@ -87,7 +89,7 @@
             this.message.Size = new System.Drawing.Size(0, 13);
             this.message.TabIndex = 5;
             // 
-            // Form1
+            // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,7 +100,7 @@
             this.Controls.Add(this.userName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Login_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -110,10 +112,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox userName;
-        private System.Windows.Forms.TextBox passWord;
-        private System.Windows.Forms.Button signIn;
         private System.Windows.Forms.Label message;
+        public System.Windows.Forms.TextBox userName;
+        public System.Windows.Forms.TextBox passWord;
+        public System.Windows.Forms.Button signIn;
     }
 }
 

@@ -13,6 +13,7 @@ namespace AdminPanel
 {
     public partial class Editor_Page : Form
     {
+        
         public Editor_Page()
         {
             InitializeComponent();
@@ -26,6 +27,8 @@ namespace AdminPanel
             groupBoxAdd.Visible = false;
             groupBoxUpdate.Visible = false;
 
+
+            BtnAddNewCustomer.Enabled = true;
         }
 
         WinFormTaskEntities db = new WinFormTaskEntities();
@@ -110,5 +113,7 @@ namespace AdminPanel
             groupBoxUpdate.Visible = false;
 
         }
+
+        
     }
 }

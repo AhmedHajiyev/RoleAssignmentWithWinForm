@@ -166,6 +166,7 @@
             this.checkBoxDelete.TabIndex = 18;
             this.checkBoxDelete.Text = "Delete";
             this.checkBoxDelete.UseVisualStyleBackColor = true;
+            this.checkBoxDelete.CheckedChanged += new System.EventHandler(this.checkBoxDelete_CheckedChanged);
             // 
             // checkBoxUpdate
             // 
@@ -176,6 +177,7 @@
             this.checkBoxUpdate.TabIndex = 17;
             this.checkBoxUpdate.Text = "Update";
             this.checkBoxUpdate.UseVisualStyleBackColor = true;
+            this.checkBoxUpdate.CheckedChanged += new System.EventHandler(this.checkBoxUpdate_CheckedChanged);
             // 
             // checkBoxRead
             // 
@@ -196,6 +198,7 @@
             this.checkBoxCreat.TabIndex = 15;
             this.checkBoxCreat.Text = "Creat";
             this.checkBoxCreat.UseVisualStyleBackColor = true;
+            this.checkBoxCreat.CheckedChanged += new System.EventHandler(this.checkBoxCreat_CheckedChanged);
             // 
             // BtnUpdateTrue
             // 

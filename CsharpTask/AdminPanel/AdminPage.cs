@@ -62,7 +62,27 @@ namespace AdminPanel
             x.Update_ = checkBoxUpdate.Checked;
             x.Read_ = checkBoxUpdate.Checked;
             x.Delete_ = checkBoxDelete.Checked;
-            
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxCreat.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxDelete.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxUpdate.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
             db.SaveChanges();
             
             DialogResult result =  MessageBox.Show("Updated");
@@ -183,6 +203,38 @@ namespace AdminPanel
 
         }
 
-        
+        private void checkBoxCreat_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxCreat.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+            
+        }
+
+        private void checkBoxUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxUpdate.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+        }
+
+        private void checkBoxDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxDelete.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+        }
     }
 }

@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnMin = new System.Windows.Forms.Button();
+            this.TxtMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxAdd.SuspendLayout();
             this.groupBoxUpdate.SuspendLayout();
@@ -280,11 +281,21 @@
             this.BtnMin.UseVisualStyleBackColor = true;
             this.BtnMin.Click += new System.EventHandler(this.BtnMin_Click);
             // 
+            // TxtMessage
+            // 
+            this.TxtMessage.AutoSize = true;
+            this.TxtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMessage.Location = new System.Drawing.Point(193, 171);
+            this.TxtMessage.Name = "TxtMessage";
+            this.TxtMessage.Size = new System.Drawing.Size(0, 42);
+            this.TxtMessage.TabIndex = 9;
+            // 
             // Editor_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TxtMessage);
             this.Controls.Add(this.BtnMin);
             this.Controls.Add(this.groupBoxUpdate);
             this.Controls.Add(this.BtnUpdateAndSeen);
@@ -302,12 +313,11 @@
             this.groupBoxUpdate.ResumeLayout(false);
             this.groupBoxUpdate.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button BtnAddNewCustomer;
         private System.Windows.Forms.GroupBox groupBoxAdd;
         private System.Windows.Forms.Button btnAdd;
@@ -317,7 +327,6 @@
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label LblSurname;
         private System.Windows.Forms.Label LblName;
-        private System.Windows.Forms.Button BtnRefresh;
         public System.Windows.Forms.Button BtnDelete;
         public System.Windows.Forms.Button BtnUpdateAndSeen;
         private System.Windows.Forms.GroupBox groupBoxUpdate;
@@ -330,6 +339,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtUpdateID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button BtnMin;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Label TxtMessage;
+        public System.Windows.Forms.Button BtnRefresh;
+        public System.Windows.Forms.Button BtnMin;
     }
 }

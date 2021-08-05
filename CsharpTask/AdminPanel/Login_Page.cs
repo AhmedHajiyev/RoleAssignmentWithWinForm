@@ -45,20 +45,20 @@ namespace AdminPanel
                 else if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.ID != 11).Count() > 0)
                 {
                     Editor_Page form3 = new Editor_Page();
-                    form3.ShowDialog();
-                    form3.BtnAddNewCustomer.Enabled = false;
-                    form3.BtnUpdateAndSeen.Enabled = false;
-                    form3.BtnDelete.Enabled = false;
-                    if (db.User_Info.Where(r=> r.Create_ == true && r.ID == Convert.ToInt32(r.Username.IndexOf(r.Username))).Count()>0)
+
+
+
+
+                    if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Create_ == true).Count() > 0)
                     {
                         form3.BtnAddNewCustomer.Enabled = true;
                     }
-                    else 
+                    else
                     {
                         form3.BtnAddNewCustomer.Enabled = false;
                     }
 
-                    if (db.User_Info.Where(r => r.Update_ == true ).Count() > 0)
+                    if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Update_ == true).Count() > 0)
                     {
                         form3.BtnUpdateAndSeen.Enabled = true;
                     }
@@ -66,7 +66,17 @@ namespace AdminPanel
                     {
                         form3.BtnUpdateAndSeen.Enabled = false;
                     }
-                    if (db.User_Info.Where(r => r.Delete_ == true).Count() > 0)
+                    if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Read_ == false).Count() > 0)
+                    {
+                        form3.BtnDelete.Visible = false;
+                        form3.BtnUpdateAndSeen.Visible = false;
+                        form3.BtnAddNewCustomer.Visible = false;
+                        form3.BtnRefresh.Visible = false;
+                        form3.BtnMin.Visible = false;
+                        form3.dataGridView1.Visible = false;
+                        form3.TxtMessage.Text = "You have no functionality";
+                    }
+                    if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Delete_ == true).Count() > 0)
                     {
                         form3.BtnDelete.Enabled = true;
                     }
@@ -74,6 +84,7 @@ namespace AdminPanel
                     {
                         form3.BtnDelete.Enabled = false;
                     }
+                    form3.ShowDialog();
                 }
                 else
                 {
@@ -91,5 +102,16 @@ namespace AdminPanel
 
         }
 
+        
+
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

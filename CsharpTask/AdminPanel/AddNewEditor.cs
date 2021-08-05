@@ -25,17 +25,30 @@ namespace AdminPanel
             User_Info user_Info = new User_Info();
             user_Info.Username = TxtUsername.Text;
             user_Info.Password = TxtPassword.Text;
-            user_Info.Email = TxtEmail.Text;
-            user_Info.Create_ = checkBoxCreat.Checked;
-            user_Info.Read_ = checkBoxRead.Checked;
-            user_Info.Update_ = checkBoxUpdate.Checked;
-            user_Info.Delete_ = checkBoxDelete.Checked;
-            TxtUsername.Clear();
-            TxtPassword.Clear();
-            TxtEmail.Clear();
-            db.User_Info.Add(user_Info);
-            db.SaveChanges();
-            MessageBox.Show("Editor Added");
+            if (TxtEmail.Text == "admin@gmail.com")
+            {
+                MessageBox.Show("Admin cannot be entered");
+                TxtEmail.ForeColor =  System.Drawing.Color.Red;
+            }
+            else
+            {
+
+                user_Info.Email = TxtEmail.Text;
+                user_Info.Create_ = checkBoxCreat.Checked;
+                user_Info.Read_ = checkBoxRead.Checked;
+                user_Info.Update_ = checkBoxUpdate.Checked;
+                user_Info.Delete_ = checkBoxDelete.Checked;
+                TxtUsername.Clear();
+                TxtPassword.Clear();
+                TxtEmail.Clear();
+                db.User_Info.Add(user_Info);
+                db.SaveChanges();
+                DialogResult result = MessageBox.Show("Editor Added");
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
 
 
         }
@@ -44,6 +57,39 @@ namespace AdminPanel
         {
             this.Close();
             
+        }
+
+        private void checkBoxCreat_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxCreat.Checked == false )
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+        }
+
+        private void checkBoxUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxUpdate.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
+        }
+
+        private void checkBoxDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxRead.Checked = true;
+            checkBoxRead.Enabled = false;
+            if (checkBoxDelete.Checked == false)
+            {
+                checkBoxRead.Checked = false;
+                checkBoxRead.Enabled = true;
+            }
         }
     }
 }
