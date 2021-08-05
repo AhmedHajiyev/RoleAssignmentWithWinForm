@@ -64,11 +64,17 @@
     <Compile Include="Customer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Editor_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Editor_Page.Designer.cs">
+      <DependentUpon>Editor_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
@@ -99,8 +105,11 @@
     <EmbeddedResource Include="AddNewEditor.resx">
       <DependentUpon>AddNewEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Editor_Page.resx">
+      <DependentUpon>Editor_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Page.resx">
+      <DependentUpon>Login_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>

@@ -6,8 +6,8 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="User_Info">
     <Key>
