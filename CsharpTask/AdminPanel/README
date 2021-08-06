@@ -1,0 +1,4 @@
+Login Page`də usarname: giris, password: giris -> olaraq daxil olunur.
+Add New Editor buttonu ilə Usarname:(istəyə uyğun) Password:(isteye uygun) Email:admin@gmail.com -> (Admin) olaraq daxil olunur.
+Sonra Admin Page bağlanaraq, Login Page qayıdılır.
+Admin üçün təyin edilən usarname və password  ilə app`ə giriş edilir.
