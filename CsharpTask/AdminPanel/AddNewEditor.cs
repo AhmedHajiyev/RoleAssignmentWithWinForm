@@ -25,7 +25,7 @@ namespace AdminPanel
             User_Info user_Info = new User_Info();
             user_Info.Username = TxtUsername.Text;
             user_Info.Password = TxtPassword.Text;
-            if (TxtEmail.Text == "admin@gmail.com")
+            if(db.User_Info.Where(r => r.Email == "admin@gmail.com" && TxtEmail.Text == "admin@gmail.com").Count() > 0)
             {
                 MessageBox.Show("Admin cannot be entered");
                 TxtEmail.ForeColor =  System.Drawing.Color.Red;

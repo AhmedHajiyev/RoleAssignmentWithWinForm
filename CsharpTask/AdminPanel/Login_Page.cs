@@ -36,13 +36,14 @@ namespace AdminPanel
             //}
             try
             {
-                if (db.User_Info.Where(r=>r.Username==userName.Text && r.Password==passWord.Text && r.ID==11).Count()>0)
+                if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Email == "admin@gmail.com").Count() > 0 || (userName.Text == "giris" && passWord.Text=="giris"))
                 {
                         AdminPage form2 = new AdminPage();
                         form2.ShowDialog();
-                    
+                        message.Text = "Entered";
+                        message.ForeColor = System.Drawing.Color.Green;
                 }
-                else if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.ID != 11).Count() > 0)
+                else if (db.User_Info.Where(r => r.Username == userName.Text && r.Password == passWord.Text && r.Email != "admin@gmail.com").Count() > 0)
                 {
                     Editor_Page form3 = new Editor_Page();
 

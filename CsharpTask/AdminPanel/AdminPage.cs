@@ -2,6 +2,8 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Linq;
+
 
 namespace AdminPanel
 {
@@ -115,7 +117,7 @@ namespace AdminPanel
             int index = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             //TxtID.Text = index.ToString();
             int id = Convert.ToInt32(index.ToString());
-            if (id == 11)
+            if (db.User_Info.Where(r => r.Email == "admin@gmail.com").Count() > 0)
             {
                 MessageBox.Show("You cannot delete the Admin");
             }
@@ -164,7 +166,7 @@ namespace AdminPanel
         private void TxtUpdateID_Leave(object sender, EventArgs e)
         {
             
-            if (TxtUpdateID.Text == "11")
+            if (db.User_Info.Where(r => r.Email == "admin@gmail.com").Count() > 0)
             {
                 TxtEmail.Text = "admin@gmail.com";
                 TxtEmail.Enabled = false;

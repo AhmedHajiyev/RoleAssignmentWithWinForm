@@ -16,3 +16,5 @@ C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.AddNewEd
 C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.AdminPage.resources
 C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.Editor_Page.resources
 C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\obj\Debug\AdminPanel.Login_Page.resources
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\WinFormTask.mdf
+C:\RoleAssignmentWithWinForm\CsharpTask\AdminPanel\bin\Debug\WinFormTask_log.ldf
